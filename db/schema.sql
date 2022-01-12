@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS  blech_db;
+
+CREATE DATABASE  blech_db;
