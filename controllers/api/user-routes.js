@@ -48,7 +48,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+// router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
@@ -59,6 +60,8 @@ router.post('/', withAuth, (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
+
+      console.log('User: ',dbUserData);
 
       res.json(dbUserData);
     });
