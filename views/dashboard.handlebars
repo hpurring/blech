@@ -22,16 +22,16 @@
 
 
 {{#if posts.length}}
-<section>
+<section class="all-posts">
   <h2>Your Posts</h2>
-  <ol>
+  <div>
     {{#each posts as |post|}}
-    <li>
+    <div>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+      <a href="/api/post/{{post.id}}" class="edit-link">Edit post</a>
+    </div>
     {{/each}}
-  </ol>
+  </div>
 </section>
 {{/if}}
 
