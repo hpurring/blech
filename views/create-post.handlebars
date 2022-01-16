@@ -1,0 +1,25 @@
+
+{{#if loggedIn}}
+<section>
+  <h2>Create New Post</h2>
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post">Post</label>
+      <textarea id="post-content" name="post-content"></textarea>
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+{{else}}
+<div>
+    <h1>bleching log in first</h1>
+</div>
+{{/if}}
+<script src="/javascript/add-post.js"></script>
+
+
+
