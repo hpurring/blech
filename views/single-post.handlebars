@@ -1,10 +1,11 @@
 <article class="post">
   <div class="title">
-    <a href="{{post.post_content}}" target="_blank">{{post.title}}</a>
-    <span>({{post.post_content}})</span>
-  </div>
-  <div class="meta">
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+    <a>{{post.title}}</a>
+    <br>
+    <a class="datetime">posted at {{post.created_at}} by {{user.username}}</a>
+    <br>
+    <br>
+    <span>{{post.post_content}}</span>
   </div>
 </article>
 
@@ -20,6 +21,9 @@
 </form>
 {{/if}}
 
+<a>comments</a>
+<br>
+<br>
 {{> comments post.comments}}
 
 {{#if loggedIn}}
