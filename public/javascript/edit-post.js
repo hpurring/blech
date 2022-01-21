@@ -1,6 +1,7 @@
 async function editFormHandler(event) {
     event.preventDefault();
     const title = document.querySelector('input[name="post-title"]').value.trim();
+    console.log(title)
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -21,5 +22,5 @@ async function editFormHandler(event) {
     }
   }
   
-  document.querySelector('.edit-post').addEventListener('click', editFormHandler);
+  document.querySelector('.edit-link').addEventListener('click', editFormHandler);
   

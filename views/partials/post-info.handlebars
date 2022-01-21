@@ -1,7 +1,7 @@
 <article class="post">
-  <div class="title">
-    <a href="/post/{{id}}">{{title}}</a>
-    <a class="author"> by {{user.username}}</a>
+  <div>
+    <a class="title" href="/post/{{id}}">{{title}}</a>
+    <a class="author"> by {{user.username}} on {{format_date created_at}} </a>
     <br>
     <span>{{post_preview}}</span>
   </div>

@@ -1,14 +1,14 @@
 <article class="post">
-  <div class="title">
-    <a name="post-title">{{post.title}}</a>
+  <div>
+    <a class="title" name="post-title">{{post.title}}</a>
     <br>
-    <a class="datetime">posted at {{post.created_at}} by {{user.username}}</a>
+    <a class="datetime">posted on {{format_date post.created_at}} by {{user.username}}</a>
     <br>
     <br>
-    <span>{{post.post_content}}</span>
-    {{#if loggedIn}}
-    <button class="edit-post">Edit Post</button>
-    {{/if}}
+    <span class="post-content">{{post.post_content}}</span>
+    {{!-- {{#if loggedIn}}
+    <button id="edit-post">Edit Post</button>
+    {{/if}} --}}
   </div>
 </article>
 
@@ -24,8 +24,7 @@
 </form>
 {{/if}}
 
-<a>comments</a>
-<br>
+<h2>comments</h2>
 <br>
 {{> comments post.comments}}
 
