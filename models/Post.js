@@ -14,6 +14,7 @@ class Post extends Model {
         attributes: [
           'id',
           'post_content',
+          'post_preview',
           'title',
           'created_at',
         ],
@@ -32,6 +33,8 @@ class Post extends Model {
   }
 }
 
+
+
 // create fields/columns for Post model
 Post.init(
   {
@@ -46,6 +49,10 @@ Post.init(
       allowNull: false
     },
     post_content: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    post_preview: {
       type: DataTypes.STRING,
       allowNull: false,
     },

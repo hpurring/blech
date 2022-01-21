@@ -8,6 +8,10 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
+      <label for="post">Post Description</label>
+      <textarea id="post-preview" name="post-preview"></textarea>
+    </div>
+    <div>
       <label for="post">Post</label>
       <textarea id="post-content" name="post-content"></textarea>
     </div>
@@ -28,7 +32,8 @@
     {{#each posts as |post|}}
     <div>
       {{> post-info post}}
-      <a href="/api/post/{{post.id}}" class="edit-link">Edit post</a>
+      {{!-- <a href="/api/post/{{post.id}}" class="edit-post">Edit post</a> --}}
+      {{!-- <button class="edit-post">Edit Post</button> --}}
     </div>
     {{/each}}
   </div>
@@ -38,3 +43,4 @@
 
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/edit-post.js"></script>

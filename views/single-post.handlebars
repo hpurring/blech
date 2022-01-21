@@ -1,11 +1,14 @@
 <article class="post">
   <div class="title">
-    <a>{{post.title}}</a>
+    <a name="post-title">{{post.title}}</a>
     <br>
     <a class="datetime">posted at {{post.created_at}} by {{user.username}}</a>
     <br>
     <br>
     <span>{{post.post_content}}</span>
+    {{#if loggedIn}}
+    <button class="edit-post">Edit Post</button>
+    {{/if}}
   </div>
 </article>
 
@@ -28,5 +31,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+<script src="/javascript/edit-post.js"></script>
 {{/if}}
