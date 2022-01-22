@@ -1,6 +1,6 @@
 <article class="post">
   <div>
-    <a class="title" name="post-title">{{post.title}}</a>
+    <a class="single-post-title" name="post-title">{{post.title}}</a>
     <br>
     <a class="datetime">posted on {{format_date post.created_at}} by {{user.username}}</a>
     <br>
@@ -30,5 +30,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/edit-post.js"></script>
+{{!-- <script src="/javascript/edit-post.js"></script> --}}
 {{/if}}

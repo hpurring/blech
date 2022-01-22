@@ -10,6 +10,10 @@
     color: #fcfcfc;
     background: linear-gradient(111.1deg, rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2%);
   }
+
+  #home-button, #dashboard-button {
+    padding: 10px;
+  }
   
   a {
     text-decoration: none;
@@ -18,7 +22,7 @@
     transition: color .1s;
   }
   
-  a:hover {
+  .title:hover {
     color: #3486eb;
   }
   
@@ -50,11 +54,16 @@
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #fcfcfc;
+    width: 100%;
   }
   
   textarea:focus, input:focus {
     outline: none;
     border: 1px solid rgb(0, 72, 126);
+  }
+
+  .login-form input, .signup-form input {
+    width: 30%
   }
   
   textarea {
@@ -135,7 +144,7 @@
     box-shadow: rgba(0, 0, 0, 1) 0px 22px 70px 4px;
   }
 
-  .post .title {
+  .post .title, .single-post-title {
     font-size: 22px;
   }
 
