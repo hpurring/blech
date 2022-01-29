@@ -121,16 +121,44 @@ router.put('/:id', withAuth, (req, res) => {
 
 router.delete('/:id', withAuth, (req, res) => {
   console.log(req.params.id);
+  const comment = Comment.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+
+  if (comment) {
   Comment.destroy({
     where: {
       post_id: req.params.id
     }
   }).then(
+    Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    }));
+
+  } 
+  else if (!comment){
   Post.destroy({
     where: {
       id: req.params.id
     }
-  }))
+  })
+
     .then(dbPostData => {
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found with this id' });
@@ -142,6 +170,6 @@ router.delete('/:id', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
+}});
 
 module.exports = router;
