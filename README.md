@@ -22,7 +22,7 @@
   ## Usage
   Use blech! to share information and ideas with other developers.
   
-  ![blech!](https://github.com/hpurring/blech/blob/main/public/images/blech_screenshot.png)("blech screenshot")
+  ![blech!](https://github.com/hpurring/blech/blob/main/public/images/blech_screenshot.png)["blech screenshot"]
   [Test out blech!](https://still-citadel-57293.herokuapp.com/)
 
 
